@@ -153,6 +153,10 @@ streamlit run diet-assistant.py
 
 * Pictorial view of the [streamlit-app](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Streamlit_Interface/Screenshot%20(96).png)
 
+<p align="center">
+  <img src="Screenshots/Screenshot(100).png">
+</p>
+
 ### Ingestion Pipeline with Apache Airflow:
 
 ***Airflow*** - open-source platform for orchestrating, scheduling, and monitoring batch-oriented workflows. [Apache-Airflow-Documentation](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
@@ -190,6 +194,11 @@ airflow scheduler
 * Check Logs: view the generated response in the task logs for `run_rag_pipeline` after the DAG runs.
 
 * Pictorial views - [apache-airflow1](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(97).png), [apache-airflow2](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(98).png), [apache-airflow3](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(99).png)
+
+
+<p align="center">
+  <img src="Ingestion-pipeline/Screenshot(97).png">
+</p>
 
 ### Containerization:
 
@@ -286,4 +295,14 @@ pipenv run python3 hybrid_search.py
 
 python3 hybrid_search.py
 ```
-<Pictorial View>(https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/Screenshot%20(102).png) of different query and response in CLI  
+![Pictorial View](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/Screenshot%20(102).png) of different queries and response in CLI  
+
+
+
+
+
+# come back here to learn how to upload images on github. create an images folder and paste all screenchots/images there
+
+<p align="center">
+  <img src="images/image.png">
+</p>
