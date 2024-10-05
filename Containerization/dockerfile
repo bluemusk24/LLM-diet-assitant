@@ -1,0 +1,15 @@
+FROM python:3.10.12-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY ["diet-app.py",  "./"]
+
+COPY ["Introduction to Nutrition Science, LibreTexts Project.pdf", "./"]
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "diet-app.py"]

@@ -1,0 +1,15 @@
+[packages]
+langchain = "*"
+langchain-community = "*"
+jupyter = "*"
+pandas = "*"
+lancedb = "*"
+sentence-transformers = "*"
+pyarrow = "*"
+llama-cpp-python = "*"
+ctransformers = "*"
+streamlit = "*"
+
+[dev-packages]
+pypdf = "*"
+tantivy = "==0.20.1"

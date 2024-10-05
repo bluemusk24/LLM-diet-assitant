@@ -1,0 +1,7 @@
+streamlit
+lancedb
+sentence-transformers
+ctransformers
+langchain
+langchain_community
+pypdf

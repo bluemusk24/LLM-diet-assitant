@@ -1,0 +1,11 @@
+langchain
+lancedb
+jupyter
+pandas
+sentence-transformers
+pyarrow
+tantivy==0.20.1
+ctransformers
+llama-cpp-python
+streamlit
+apache-airflow

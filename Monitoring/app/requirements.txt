@@ -1,0 +1,11 @@
+streamlit
+psycopg2-binary
+lancedb
+pandas
+numpy
+pypdf
+pyarrow
+sentence-transformers
+transformers
+langchain
+langchain-community
