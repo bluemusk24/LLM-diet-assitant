@@ -247,6 +247,12 @@ docker-compose up --build
 - PostgreSQL will be running on port `5432`
 - Grafana will be available on `http://localhost:3000`
 
+Pictorial View of `Streanlit-Feedback`
+
+<p align="center">
+  <img src="images/streamlit_feedback.png">         
+</p>
+
 * To inspect the PostgreSQL container for created tables, run the following command in the terminal:
 
 ```bash
@@ -263,25 +269,11 @@ SELECT * FROM qa;
 SELECT * FROM feedback;
 ```
 
-* 
-diet_db=# \dt
-          List of relations
- Schema |   Name   | Type  |  Owner
---------+----------+-------+----------
- public | feedback | table | postgres
- public | qa       | table | postgres
-(2 rows)
-
 `Outcomes of queries on Postgres database table - qa:`
 
- id |                question                |                                                                                                                    answer
-
-----+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  1 | Describe the respiratory system for me | The major respiratory structures span the nasal cavity to the diaphragm.
-  2 | Tell me something about Vitamins       | thiamine, riboflavin, niacin, pantothenic acid, pyridoxine, biotin, folate and cobalamin.
-  3 | Tell me something about Carbohydrates  | The primary function of carbohydrates in the human body is energy production.
-  4 | What are Nutrients?                    | are substances required by the body to perform its basic functions.
-  5 | Describe diabetes for me               | Type 1 diabetes is a metabolic disease in which insulin-secreting cells in the pancreas are killed by an abnormal response of the immune system, causing a lack of insulin in the body. Its onset typically occurs before the age of thirty.
+<p align="center">
+  <img src="images/postgres.png">
+</p>
 
 * Run this command to shut the containers down
 
