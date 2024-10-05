@@ -154,7 +154,7 @@ streamlit run diet-assistant.py
 * Pictorial view of the [streamlit-app](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Streamlit_Interface/Screenshot%20(96).png)
 
 <p align="center">
-  <img src="Screenshots/Screenshot(100).png">
+  <img src="images/streamlit_app.png">
 </p>
 
 ### Ingestion Pipeline with Apache Airflow:
