@@ -1,7 +1,7 @@
 ## Project Title: Diet-Assistant RAG System
 
 <p align="center">
-  <img src="images/diet-assistant.webp">
+  <img src="images/diet-assistant.png">
 </p>
 
 ### Problem description:
@@ -222,7 +222,7 @@ docker run -it --rm -p 8501:8501 diet-app
 ```
 ***Note*** - use the semantic search (new_diet_table) with the query here on the `streamlit-ui`
 
-### Monitoring:
+### Monitoring with Feedback:
 
 * Create a Monitoring folder that includes: 
 
