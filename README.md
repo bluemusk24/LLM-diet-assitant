@@ -151,7 +151,7 @@ streamlit run diet-assistant.py
 
 * Access the streamlit web UI at `http://localhost:8501` where you can monitor and query the interface.
 
-* Pictorial view of the [streamlit-app](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Streamlit_Interface/Screenshot%20(96).png)
+* Pictorial view of the `streamlit-app`
 
 <p align="center">
   <img src="images/streamlit_app.png">
@@ -193,11 +193,18 @@ airflow scheduler
 
 * Check Logs: view the generated response in the task logs for `run_rag_pipeline` after the DAG runs.
 
-* Pictorial views - [apache-airflow1](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(97).png), [apache-airflow2](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(98).png), [apache-airflow3](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(99).png)
-
+* Pictorial views - `apache-airflow1, apache-airflow2, apache-airflow3`
 
 <p align="center">
-  <img src="Ingestion-pipeline/Screenshot(97).png">
+  <img src="images/airflow1.png">
+</p>
+
+<p align="center">
+  <img src="images/airflow2.png">
+</p>
+
+<p align="center">
+  <img src="images/airflow3.png">
 </p>
 
 ### Containerization:
@@ -209,7 +216,7 @@ docker build -t diet-app .
 
 docker run -it --rm -p 8501:8501 diet-app
 ```
-***Note*** - use the semantic search (new_diet_table) with the query here on the [streamlit-ui](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Containerization/Screenshot%20(100).png)
+***Note*** - use the semantic search (new_diet_table) with the query here on the `streamlit-ui`
 
 ### Monitoring:
 
@@ -295,14 +302,8 @@ pipenv run python3 hybrid_search.py
 
 python3 hybrid_search.py
 ```
-![Pictorial View](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/Screenshot%20(102).png) of different queries and response in CLI  
-
-
-
-
-
-# come back here to learn how to upload images on github. create an images folder and paste all screenchots/images there
+Pictorial View of `hybrid search`
 
 <p align="center">
-  <img src="images/image.png">
+  <img src="images/hybrid_search.png">
 </p>
