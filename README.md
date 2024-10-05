@@ -1,18 +1,16 @@
 ## Project Title: Diet-Assistant RAG System
 
-![Diet Assistant](https://raw.githubusercontent.com/bluemusk24/LLM-diet-assitant/refs/heads/main/diet-assistant.webp)
-
 ### Problem description:
 
 Are you an individual struggling to track his/her food intake or lack knowledge about the nutritional content of meals, leading to unhealthy eating habits? Do you lack motivation to read nutritional books to gain knowledge on nutrional science? Look no further because a diet assitant is the solution!
 
 A diet assistant helps users monitor and understand their eating habits by providing personalized insights into their dietary patterns. The assistant can solve this by offering features like calorie counting, macronutrient tracking, and food recommendations based on health goals or dietary restrictions, enabling users to make informed decisions and stay on track with their health objectives.
 
-In this project, I will be building a diet-assistant RAG (Retrieval-Augmented Generation) system, designed to enhance the quality and accuracy of dietary advice by combining information retrieval with generative AI capabilities. Here's how it works:
+In this project, I will be building a diet-assistant RAG (`Retrieval-Augmented Generation`) system, designed to enhance the quality and accuracy of dietary advice by combining information retrieval with generative AI capabilities. Here's how it works:
 
 1. ***Retrieval Component***: The system first retrieves relevant information from a knowledge database. This includes nutritional information, dietary guidelines, recipes, and user-specific data like dietary preferences and restrictions.
 
-2. ***Generation Component***: After retrieving the necessary information, the system uses a generative open-source model (*llama3*) to synthesize and generate personalized dietary advice/nutrient information. This ensures the advice and knowledge is not only accurate but also contextually relevant and easy to understand.
+2. ***Generation Component***: After retrieving the necessary information, the system uses a `generative open-source model` to synthesize and generate personalized dietary advice/nutrient information. This ensures the advice and knowledge is not only accurate but also contextually relevant and easy to understand.
 
 3. ***Personalization***: The system can tailor recommendations based on individual user data, such as health goals, allergies, and dietary preferences. This makes the advice and knowledge more relevant and actionable for the user.
 
@@ -20,7 +18,7 @@ In this project, I will be building a diet-assistant RAG (Retrieval-Augmented Ge
 
 Overall, a diet assistant RAG system aims to provide more accurate, personalized, and contextually rich dietary knowledge compared to traditional methods.
 
-For more information on the pdf documents used for this project: [Nutrition Science]()
+For more information on the pdf documents used for this project: [Nutrition Science](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/RAG_flow/Introduction%20to%20Nutrition%20Science%2C%20LibreTexts%20Project.pdf)
 
 **Technology Used** - not discussed in the class:
 
@@ -54,7 +52,7 @@ pipenv install -r requirements.txt
 
 1. ***using meta llama3 locally***
 
-* The [ollama_diet_assistant_RAG]() notebook process was done on Google Colab because of access to GPU. To use llama3 locally, run the following:
+* The [ollama_diet_assistant_RAG](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/rough_ollamaRAG.ipynb) notebook process was done on Google Colab because of access to GPU. To use llama3 locally, run the following:
 
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
@@ -76,15 +74,15 @@ ollama rm llama3:latest
 
 2. ***using Google flan-T5-Large from HuggingFace*** [google/flan-t5-large](https://huggingface.co/google/flan-t5-large)
 
-[diet-assitant-ragflow]() notebook contains the procedures for using this model and [PDF_docs]() is the data used.
+[diet-assitant-ragflow](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/RAG_flow/diet-assistant-ragflow.ipynb) notebook contains the procedures for using this model and [PDF_docs](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/RAG_flow/Introduction%20to%20Nutrition%20Science%2C%20LibreTexts%20Project.pdf) is the data used.
 
 ### Evaluation:
 
-* [retrieval_evaluation]() notebook contains both `Hit Rate and MRR` evaluation metrics for retrieving queries. 
+* [retrieval_evaluation](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Evaluation/retrieval_evaluation.ipynb) notebook contains both `Hit Rate and MRR` evaluation metrics for retrieving queries. 
 
 **Offline-rag-evaluation for text-search**
 
-* [RAG_eval_textsearch]() notebook contains different offline rag evaluation approaches for text search:
+* [RAG_eval_textsearch](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Evaluation/RAG_eval_textsearch.ipynb) notebook contains different offline rag evaluation approaches for text search:
 
 1. ***Precision*** - measures how many of the tokens in the response are relevant (i.e. present in the query). The precision for the above query is 5%.
 
@@ -113,7 +111,7 @@ Precision: 0.05, Recall: 0.67
 
 **Offline-rag-evaluation for semantic search**
 
-* [RAG_eval_vectorsearch]() notebook contains different offline rag evaluation approaches for semantic search:
+* [RAG_eval_vectorsearch](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Evaluation/RAG_eval_vectorsearch.ipynb) notebook contains different offline rag evaluation approaches for semantic search:
 
 1. ***Cosine Similarity*** - measures how similar the query and response are to themselves. Example is the query and response below:
 
@@ -141,7 +139,7 @@ Precision: 0.05, Recall: 0.67
 
 * mkdir Streamlit_Interface
 
-* copy `diet-assitant-ragflow.ipynb` to directory and convert to a python script [diet-assitant.py]()
+* copy `diet-assitant-ragflow.ipynb` to directory and convert to a python script [diet-assitant.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Streamlit_Interface/diet-assistant.py)
 
 ```bash
 cd Streamlit-app
@@ -155,13 +153,13 @@ streamlit run diet-assistant.py
 
 * Access the streamlit web UI at `http://localhost:8501` where you can monitor and query the interface.
 
-* Pictorial view of the [streamlit-app]()
+* Pictorial view of the [streamlit-app](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Streamlit_Interface/Screenshot%20(96).png)
 
 ### Ingestion Pipeline with Apache Airflow:
 
 ***Airflow*** - open-source platform for orchestrating, scheduling, and monitoring batch-oriented workflows. [Apache-Airflow-Documentation](https://airflow.apache.org/docs/apache-airflow/stable/index.html)
 
-***DAG*** - `Directed Acyclic Graphs` is Airflow’s representation of a workflow. The [rag_pipeline_dag.py]() is the `apache-airflow workflow(DAG)`. The process for the workflow orchestration below:
+***DAG*** - `Directed Acyclic Graphs` is Airflow’s representation of a workflow. The [rag_pipeline_dag.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/rag_pipeline_dag.py) is the `apache-airflow workflow(DAG)`. The process for the workflow orchestration below:
 
 ```bash
 pip install apache-airflow
@@ -193,29 +191,29 @@ airflow scheduler
 
 * Check Logs: view the generated response in the task logs for `run_rag_pipeline` after the DAG runs.
 
-* Pictorial views - [apache-airflow1](), [apache-airflow2](), [apache-airflow3]()
+* Pictorial views - [apache-airflow1](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(97).png), [apache-airflow2](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(98).png), [apache-airflow3](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Ingestion-pipeline/Screenshot%20(99).png)
 
 ### Containerization:
 
-* create a [dockerfile](), build the image and run the container for the [streamlit app]()
+* create a [dockerfile](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Containerization/dockerfile), build the image and run the container for the [streamlit_app.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Containerization/diet-app.py)
 
 ```bash
 docker build -t diet-app .
 
 docker run -it --rm -p 8501:8501 diet-app
 ```
-***Note*** - use the semantic search (new_diet_table) with the query here on the [streamlit-ui]()
+***Note*** - use the semantic search (new_diet_table) with the query here on the [streamlit-ui](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Containerization/Screenshot%20(100).png)
 
 ### Monitoring:
 
 * Create a Monitoring folder that includes: 
 
-- a folder for the Streamlit app called [app]()
-- a [dockerfile]() for the Streamlit app inside the `app/` folder
-- a [requirements.txt]() file inside the `app/` folder
-- a [diet-feedback.py]() script inside the `app/` folder
-- a [docker-compose.yml]() file in the root directory `Monitoring`
-- a [grafana-postgres-datasource.yaml]() file to access Postgres in Grafana
+- a folder for the Streamlit app called [app](https://github.com/bluemusk24/LLM-diet-assitant/tree/main/Monitoring/app)
+- a [dockerfile](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Monitoring/app/dockerfile) for the Streamlit app inside the `app/` folder
+- a [requirements.txt](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Monitoring/app/requirements.txt) file inside the `app/` folder
+- a [diet-feedback.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Monitoring/app/diet-feedback.py) script inside the `app/` folder
+- a [docker-compose.yml](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Monitoring/docker-compose.yaml) file in the root directory `Monitoring`
+- a [grafana_datasource.yaml](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Monitoring/config/grafana_datasource.yml) file to access Postgres in Grafana
 
 * Run the following in the root directory `Monitoring`
 
@@ -258,8 +256,9 @@ diet_db=# \dt
 
 `Outcomes of queries on Postgres database table - qa:`
 
- id |                question                |                                  answer
-+--------------------------------------------------------------------------------------------------------------------------------
+ id |                question                |                                                                                                                    answer
+
+----+----------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   1 | Describe the respiratory system for me | The major respiratory structures span the nasal cavity to the diaphragm.
   2 | Tell me something about Vitamins       | thiamine, riboflavin, niacin, pantothenic acid, pyridoxine, biotin, folate and cobalamin.
   3 | Tell me something about Carbohydrates  | The primary function of carbohydrates in the human body is energy production.
