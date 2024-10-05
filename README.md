@@ -1,5 +1,9 @@
 ## Project Title: Diet-Assistant RAG System
 
+<p align="center">
+  <img src="images/diet-assistant.webp">
+</p>
+
 ### Problem description:
 
 Are you an individual struggling to track his/her food intake or lack knowledge about the nutritional content of meals, leading to unhealthy eating habits? Do you lack motivation to read nutritional books to gain knowledge on nutrional science? Look no further because a diet assitant is the solution!
