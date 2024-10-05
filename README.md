@@ -271,7 +271,7 @@ docker-compose down
 
 ### Best Practices
 
-** Hybrid Search** - this [hybrid_search.py] script combines both `text-search`, `vector-search` and LLM `google-flan-t5-large`.
+** Hybrid Search** - this [hybrid_search.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/hybrid_search.py) script combines both `text-search`, `vector-search` and LLM `google-flan-t5-large`.
 
 *  I ran the following commands:
 
@@ -286,4 +286,4 @@ pipenv run python3 hybrid_search.py
 
 python3 hybrid_search.py
 ```
-<Pictorial View>() of different query and response in CLI  
+<Pictorial View>(https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/Screenshot%20(102).png) of different query and response in CLI  
