@@ -88,16 +88,14 @@ ollama rm llama3:latest
 
 2. ***Recall*** - measures how many of the query tokens are captured in the response. The recall for the above query is 67%.
 
-```bash
-query = 'What are nutrients'
-response = rag_pipeline(query, model, tokenizer)
+`query = 'What are nutrients'`
+`response = rag_pipeline(query, model, tokenizer)`
 
-precision, recall = exact_match_evaluation(query, response)
-print(f"Precision: {precision:.2f}, Recall: {recall:.2f}")
+`precision, recall = exact_match_evaluation(query, response)`
+`print(f"Precision: {precision:.2f}, Recall: {recall:.2f}")`
 
-The exact match of the query_tokens and response_tokens is {'nutrients', 'are'}
-Precision: 0.05, Recall: 0.67
-```
+`The exact match of the query_tokens and response_tokens is {'nutrients', 'are'}`
+`Precision: 0.05, Recall: 0.67`
 
 3. ***LLM-as-as-Judge*** - [google/flan-t5-base](https://huggingface.co/google/flan-t5-base) gave evaluation of 100% for this query:
 
@@ -265,15 +263,27 @@ diet_db=# \dt
   4 | What are Nutrients?                    | are substances required by the body to perform its basic functions.
   5 | Describe diabetes for me               | Type 1 diabetes is a metabolic disease in which insulin-secreting cells in the pancreas are killed by an abnormal response of the immune system, causing a lack of insulin in the body. Its onset typically occurs before the age of thirty.
 
+* Run this command to shut the containers down
 
+```bash
+docker-compose down
+```
 
+### Best Practices
 
+** Hybrid Search** - this [hybrid_search.py] script combines both `text-search`, `vector-search` and LLM `google-flan-t5-large`.
 
+*  I ran the following commands:
 
+```bash
+cd Best_Practices
 
+pipenv shell
 
+PS1='> '
 
+pipenv run python3 hybrid_search.py
 
-
-
-
+python3 hybrid_search.py
+```
+<Pictorial View>() of different query and response in CLI  
