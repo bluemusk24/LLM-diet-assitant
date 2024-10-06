@@ -13,3 +13,5 @@ streamlit = "*"
 [dev-packages]
 pypdf = "*"
 tantivy = "==0.20.1"
+nltk = "*"
+spellchecker = "*"

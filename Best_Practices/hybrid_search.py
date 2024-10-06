@@ -3,7 +3,6 @@ from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import warnings
 
-
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Connect to LanceDB and open tables

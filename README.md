@@ -283,7 +283,7 @@ docker-compose down
 
 ### Best Practices
 
-** Hybrid Search** - this [hybrid_search.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/hybrid_search.py) script combines both `text-search`, `vector-search` and LLM `google-flan-t5-large`.
+**Hybrid Search** - this [hybrid_search.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/hybrid_search.py) script combines both `text-search`, `vector-search` and LLM `google-flan-t5-large`.
 
 *  I ran the following commands:
 
@@ -303,3 +303,10 @@ Pictorial View of `hybrid search`
 <p align="center">
   <img src="images/hybrid_search.png">
 </p>
+
+**Document Re-ranking** - [reranking.py]() script
+In LanceDB, document re-ranking can be done by re-scoring the search results based on additional criteria. When you perform an initial search, whether it’s a full-text search or a semantic search, you can reorder the results based on relevance using a custom scoring function.  
+
+```bash
+pipenv run python3 reranking.py
+```
