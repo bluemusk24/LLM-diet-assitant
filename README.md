@@ -304,7 +304,7 @@ Pictorial View of `hybrid search`
   <img src="images/hybrid_search.png">
 </p>
 
-**Document Re-ranking** - [reranking.py]() script
+**Document Re-ranking** - [reranking.py](https://github.com/bluemusk24/LLM-diet-assitant/blob/main/Best_Practices/reranking.py) script
 In LanceDB, document re-ranking can be done by re-scoring the search results based on additional criteria. When you perform an initial search, whether it’s a full-text search or a semantic search, you can reorder the results based on relevance using a custom scoring function.  
 
 ```bash
